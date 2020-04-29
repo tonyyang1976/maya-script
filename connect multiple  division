@@ -1,5 +1,4 @@
 import maya.cmds as cmds
 smooths = cmds.ls(type='polySmoothFace')
-print smooths
     for each in smooths:
-    cmds.connectAttr ( 'master.level', each+'.divisions')
+    cmds.connectAttr ('master.level', each+'.divisions')
