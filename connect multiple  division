@@ -1,4 +1,3 @@
-import maya.cmds as cmds
-smooths = cmds.ls(type='polySmoothFace')
-    for each in smooths:
-    cmds.connectAttr ('master.level', each+'.divisions')
+masterAttr = "master.attr" #replace with your attribute
+for node in cmds.ls(type="polySmoothFace"):
+	cmds.connectAttr(masterAttr, '%s.divisions' % node)
